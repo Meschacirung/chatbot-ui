@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="../css/tailwind.css">
     <link rel="stylesheet" href="../font-awesome/css/all.min.css">
 </head>
-<body class="bg-gray-50" style="font-family:Rubik;">
+<body class="bg-gray-50 transition-all duration-700" style="font-family:Rubik;">
 
     <div class="m-auto lg:w-5/12">
 
-        <div class="mx-5 my-5 rounded-xl bg-white shadow-sm p-5">
+        <div class="mx-5 my-5 rounded-xl bg-white shadow-sm p-5" id="info">
             <div class="flex items-center gap-5">
                 <div class="w-3/12">
-                    <div class="w-16 h-16 rounded-full bg-purple-50 flex justify-center items-center">
+                    <div id="icon" class="w-16 h-16 rounded-full bg-purple-50 flex justify-center items-center">
                         <i class="fa fa-cloud-sun text-purple-500 fa-2x shadow-2xl">
 
                         </i>
@@ -24,151 +24,103 @@
                 </div>
 
                 <div class="w-9/12">
-                    <h2 class="text-xl font-semibold text-gray-900">24° Mostly Cloudy</h2>
-                    <p class="mt-1 text-lg text-gray-800">Current location</p>
+                    <h2 id="ih" class="text-xl font-semibold text-gray-800">24° Mostly Cloudy</h2>
+                    <p id="ip" class="mt-1 text-lg text-gray-600">Current location</p>
                 </div>
             </div>
         </div>
 
-        <div class="px-4 mb-32 mt-5">
+        <div class="px-4 mb-32 mt-5 chat">
+            
+            <div class="w-10/12 ml-auto mt-4" id="msg-right">
+                <img src="../images/u.avatar.png" class="ml-auto w-8 mb-1 rounded-full" alt="">
+                
+                <div>
+                    <div class="ml-auto w-max">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="msgLSvg fill-current text-gray-200" width="13.799" height="7.826" viewBox="0 0 13.799 7.826">
+                            <path id="Soustraction_2" data-name="Soustraction 2" d="M-2286.9,102.7h-13.8v-.171a21.224,21.224,0,0,0,13.8-7.656V102.7Z" transform="translate(2300.7 -94.873)"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="msgLCore text-lg w-max ml-auto py-2 px-3 bg-gray-200 text-gray-600 rounded-l-3xl rounded-br-3xl">
+                        Don't code in 2021
+                    </div>
+
+                    
+                </div>
+            </div>
 
             <div class="w-10/12 mr-auto mt-4" id="msg-left">
                 <img src="../images/gAssistant.png" class="w-7 mb-1" alt="">
     
                 <div>
                     <div class="-mb-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13.799" height="10.527" viewBox="0 0 13.799 10.527">
+                        <svg class="msgRSvg fill-current text-gray-50" xmlns="http://www.w3.org/2000/svg" width="13.799" height="10.527" viewBox="0 0 13.799 10.527">
                             <g id="left" transform="translate(-89.799 -172.173)">
                               <g id="Soustraction_2" data-name="Soustraction 2" transform="translate(2390.499 77.3)" fill="none">
                                 <path d="M-2300.7,102.7h13.8v-.171a21.224,21.224,0,0,1-13.8-7.656V102.7Z" stroke="none"/>
                                 <path d="M -2293.4501953125 101.6999053955078 C -2295.7490234375 100.6528625488281 -2297.861328125 99.21524047851563 -2299.69970703125 97.43533325195313 L -2299.69970703125 101.6999053955078 L -2293.4501953125 101.6999053955078 M -2286.90087890625 102.6999053955078 L -2300.69873046875 102.6999053955078 L -2300.69970703125 102.6999053955078 L -2300.69970703125 102.6988983154297 L -2300.69970703125 94.87345886230469 C -2297.220458984375 99.12329864501953 -2292.3203125 101.8418655395508 -2286.90087890625 102.5293655395508 L -2286.90087890625 102.6999053955078 Z" stroke="none" fill="#d1d5db"/>
                               </g>
-                              <path id="Tracé_5" data-name="Tracé 5" d="M0,0,5.637.128,6.794.472l.609.2c.144.072,1.484.466,1.844.559C10.461,2.139,8,4,8,4H0Z" transform="translate(90.8 178.7)" fill="#f9fafb"/>
+                              <path id="Tracé_5" data-name="Tracé 5" d="M0,0,5.637.128,6.794.472l.609.2c.144.072,1.484.466,1.844.559C10.461,2.139,8,4,8,4H0Z" transform="translate(90.8 178.7)"/>
                             </g>
                         </svg>
                     </div>
 
-                    <div class="text-lg w-max py-2 px-3 border border-gray-300 text-gray-600 rounded-r-full rounded-bl-full">
-                        Bonjour
+                    <div class="msgRCore text-lg w-max py-2 px-3 border border-gray-300 text-gray-600 rounded-r-full rounded-bl-full">
+                        Hello, say something ...
                     </div>
                 </div>
             </div>
-    
-            <div class="w-10/12 ml-auto mt-4" id="msg-right">
-                <img src="../images/u.avatar.png" class="ml-auto w-8 mb-1 rounded-full" alt="">
-                
-                <div>
-                    <div class="ml-auto w-max">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13.799" height="7.826" viewBox="0 0 13.799 7.826">
-                            <path id="Soustraction_2" data-name="Soustraction 2" d="M-2286.9,102.7h-13.8v-.171a21.224,21.224,0,0,0,13.8-7.656V102.7Z" transform="translate(2300.7 -94.873)" fill="#E5E7EB"/>
-                        </svg>
-                    </div>
-                      
-                    <div class="text-lg w-auto ml-auto py-2 px-3 bg-gray-200 text-gray-600 rounded-l-3xl rounded-br-3xl">
-                        Eveniet aliquid nam maxime atque cupiditate illum at minima a assumenda nulla, adipisci neque? Nobis iste dolorum magnam.
-                    </div>
-
-                    
-                </div>
-            </div> 
-            
-            <div class="w-10/12 mr-auto mt-4" id="msg-left">
-                <img src="../images/gAssistant.png" class="w-7 mb-1" alt="">
-    
-                <div>
-                    <div class="-mb-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13.799" height="10.527" viewBox="0 0 13.799 10.527">
-                            <g id="left" transform="translate(-89.799 -172.173)">
-                              <g id="Soustraction_2" data-name="Soustraction 2" transform="translate(2390.499 77.3)" fill="none">
-                                <path d="M-2300.7,102.7h13.8v-.171a21.224,21.224,0,0,1-13.8-7.656V102.7Z" stroke="none"/>
-                                <path d="M -2293.4501953125 101.6999053955078 C -2295.7490234375 100.6528625488281 -2297.861328125 99.21524047851563 -2299.69970703125 97.43533325195313 L -2299.69970703125 101.6999053955078 L -2293.4501953125 101.6999053955078 M -2286.90087890625 102.6999053955078 L -2300.69873046875 102.6999053955078 L -2300.69970703125 102.6999053955078 L -2300.69970703125 102.6988983154297 L -2300.69970703125 94.87345886230469 C -2297.220458984375 99.12329864501953 -2292.3203125 101.8418655395508 -2286.90087890625 102.5293655395508 L -2286.90087890625 102.6999053955078 Z" stroke="none" fill="#d1d5db"/>
-                              </g>
-                              <path id="Tracé_5" data-name="Tracé 5" d="M0,0,5.637.128,6.794.472l.609.2c.144.072,1.484.466,1.844.559C10.461,2.139,8,4,8,4H0Z" transform="translate(90.8 178.7)" fill="#f9fafb"/>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <div class="text-lg w-max py-2 px-3 border border-gray-300 text-gray-600 rounded-r-full rounded-bl-full">
-                        Bonjour
-                    </div>
-                </div>
-            </div>
-    
-            <div class="w-10/12 ml-auto mt-4" id="msg-right">
-                <img src="../images/u.avatar.png" class="ml-auto w-8 mb-1 rounded-full" alt="">
-                
-                <div>
-                    <div class="ml-auto w-max">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13.799" height="7.826" viewBox="0 0 13.799 7.826">
-                            <path id="Soustraction_2" data-name="Soustraction 2" d="M-2286.9,102.7h-13.8v-.171a21.224,21.224,0,0,0,13.8-7.656V102.7Z" transform="translate(2300.7 -94.873)" fill="#E5E7EB"/>
-                        </svg>
-                    </div>
-                      
-                    <div class="text-lg w-auto ml-auto py-2 px-3 bg-gray-200 text-gray-600 rounded-l-3xl rounded-br-3xl">
-                         Inventore perspiciatis placeat eaque eveniet aliquid nam maxime atque cupiditate illum at minima a assumenda nulla, adipisci neque? Nobis iste dolorum magnam.
-                    </div>
-
-                    
-                </div>
-            </div> 
-            
             
         </div>
-        
         
         <div class="fixed bottom-0 lg:w-5/12 w-full">
-            <div class="bg-white bg-opacity-90 flex justify-between items-center py-3 px-5">
+            
+            <div id="options" class="bg-white bg-opacity-90 flex justify-between items-center py-3 px-5">
 
-                <div>
-                    <i class="fa fa-cloud text-gray-400">
+                <div id="aback" class="text-gray-600 text-xl hover:text-gray-700">
+                    <i class="fa fa-arrow-left">
 
                     </i>
                 </div>
 
-                <div class="w-7/12 m-auto bg-white rounded-full shadow-md py-3 px-6 flex justify-between items-center">
-                    <div>
+                <div id="mainOptions" class="w-7/12 m-auto bg-white shadow-md rounded-full px-3 h-16 flex justify-between items-center">
+                    <div class="aicon hover:bg-gray-600 hover:bg-opacity-5 rounded-full w-9 h-9 flex justify-center items-center">
                         <i class="fa fa-camera text-gray-500"></i>
                     </div>
 
                     <div>
-                        <img src="../images/google-mic-logo.png" class="w-5" alt="">
+                        <div class="mic hover:bg-gray-100 rounded-full w-12 h-12 flex justify-center items-center">
+                            <img src="../images/google-mic-logo.png" class="w-5" alt="">
+                        </div>
+
+                        <div class="flex hidden dots transition-all duration-700 delay-1s">
+                            <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+                            <div class="h-2 w-2 rounded-full bg-red-500"></div>
+                            <div class="h-2 w-2 rounded-full bg-green-500"></div>
+                            <div class="h-2 w-2 rounded-full bg-yellow-500"></div>
+                        </div>
                     </div>
 
-                    <div>
+                    <div class="aicon hover:bg-gray-600 hover:bg-opacity-5 rounded-full w-9 h-9 flex justify-center items-center">
                         <i class="fa fa-keyboard text-gray-500"></i>
                     </div>
                 </div>
 
-                <div>
-                    <i class="fa fa-compass text-gray-400">
+                <div id="theme" class="text-gray-600 text-xl hover:text-gray-700">
+                    <i class="fa fa-moon"></i>
+                </div>
 
-                    </i>
+                <div id="themeLight" class="hidden text-gray-400 text-xl hover:text-gray-200">
+                    <i class="fa fa-sun"></i>
                 </div>
             </div>
+        
         </div>
-        <form action="" class="hidden fixed bottom-0 text-white lg:w-5/12 w-full shadow-md flex items-center px-3 pb-3 bg-gradient-to-b from-transparent via-gray-900 to-gray-900">
-            <input type="text" class="bg-gray-800 py-4 w-10/12 focus:outline-none pl-12 px-3 rounded-full" placeholder="Type something">
-    
-            <button class="absolute left-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
-                    <g id="Icon_feather-smile" data-name="Icon feather-smile" transform="translate(-2 -2)">
-                      <path id="Tracé_1" data-name="Tracé 1" d="M33,18A15,15,0,1,1,18,3,15,15,0,0,1,33,18Z" fill="none" stroke="#b1b1b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                      <path id="Tracé_2" data-name="Tracé 2" d="M12,21a8.1,8.1,0,0,0,6,3,8.1,8.1,0,0,0,6-3" fill="none" stroke="#b1b1b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                      <path id="Tracé_3" data-name="Tracé 3" d="M13.5,13.5h.015" fill="none" stroke="#b1b1b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                      <path id="Tracé_4" data-name="Tracé 4" d="M22.5,13.5h.015" fill="none" stroke="#b1b1b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    </g>
-                </svg>  
-            </button>
-    
-            <div class="absolute flex justify-center items-center right-3 h-14 w-14 rounded-full bg-gray-800 z-50">
-                <button type="submit" class="h-14 w-14 flex justify-center items-center rounded-full shadow-2xl bg-pink-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1" width="30" height="30" viewBox="0 0 38.172 38.172">
-                        <path id="Icon_ionic-ios-send" data-name="Icon ionic-ios-send" d="M30.649,4.563,4.838,15.813a.592.592,0,0,0,.021,1.076l6.982,3.945a1.126,1.126,0,0,0,1.287-.127L26.895,8.838c.091-.077.309-.225.394-.141s-.049.3-.127.394L15.251,22.507a1.122,1.122,0,0,0-.113,1.343L19.7,31.17a.594.594,0,0,0,1.069-.014L31.444,5.344A.592.592,0,0,0,30.649,4.563Z" transform="matrix(0.695, 0.719, -0.719, 0.695, 19.53, -6.367)" fill="#ffffff"/>
-                    </svg>
-                </button>
-            </div>
-        </form>
+
     </div>
 
+    <script src="../js/main.js"></script>
+    <script src="../js/theme.js"></script>
 </body>
 </html>
